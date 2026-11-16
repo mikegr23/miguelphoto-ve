@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- ===== SEO: título y descripción (lo que aparece en Google) ===== -->
-  <title>Miguel González | Fotógrafo, Filmmaker y Social Media Manager en Caracas</title>
-  <meta name="description" content="Social media manager, fotógrafo y filmmaker en Caracas con más de 6 años en marketing. Contenido UGC, campañas para marcas, nicho médico, pautas en estudio, eventos, bodas, 15 años y podcast.">
-  <meta name="keywords" content="fotógrafo en Caracas, social media manager Caracas, filmmaker Caracas, creador de contenido UGC Venezuela,fotógrafo de bodas Caracas, fotógrafo de 15 años Caracas, fotografía de estudio Caracas, fotógrafo para médicos, contenido para redes sociales Caracas, reels, producción de podcast Caracas">
+  <title>Miguel González | Fotógrafo y Creador de Contenido en Caracas</title>
+  <meta name="description" content="Fotógrafo, filmmaker y creador de contenido en Caracas con más de 6 años de experiencia. Fotografía de estudio, bodas, 15 años, eventos, marcas, nicho médico, reels, UGC y podcast.">
+  <meta name="keywords" content="fotógrafo en Caracas, creador de contenido Caracas, filmmaker Caracas, creador de contenido UGC Venezuela, fotógrafo de bodas Caracas, fotógrafo de 15 años Caracas, fotografía de estudio Caracas, fotógrafo para médicos, reels Caracas, producción de podcast Caracas">
   <meta name="author" content="Miguel González">
   <meta name="theme-color" content="#0f0e0d">
   <!-- EDITA: cambia esta URL por la dirección final de tu web -->
@@ -16,8 +16,8 @@
   <!-- Vista previa al compartir por WhatsApp / redes -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_VE">
-  <meta property="og:title" content="Miguel González | Fotógrafo, Filmmaker y Social Media Manager">
-  <meta property="og:description" content="Contenido con estrategia para marcas, médicos y momentos únicos en Caracas. Foto, video, UGC, campañas y podcast.">
+  <meta property="og:title" content="Miguel González | Fotógrafo y Creador de Contenido en Caracas">
+  <meta property="og:description" content="Fotografía y contenido para marcas, médicos y momentos únicos en Caracas. Foto, video, reels, UGC y podcast.">
   <meta property="og:url" content="https://miguelphoto.pages.dev/">
   <meta property="og:image" content="https://miguelphoto.pages.dev/img/og-portada.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -37,11 +37,11 @@
     "@type": "ProfessionalService",
     "name": "Miguel González",
     "alternateName": ["Miguelphoto.ve", "@miguelphoto.ve"],
-    "description": "Social media manager, fotógrafo y filmmaker en Caracas: contenido UGC, campañas de marketing, marcas de consumo masivo, nicho médico, pautas en estudio, eventos, bodas, 15 años y producción de podcast.",
+    "description": "Fotógrafo, filmmaker y creador de contenido en Caracas: fotografía de estudio, bodas, 15 años, eventos, marcas de consumo masivo, nicho médico, reels, contenido UGC y producción de podcast.",
     "founder": {
       "@type": "Person",
       "name": "Miguel González",
-      "jobTitle": "Social Media Manager, Fotógrafo y Filmmaker",
+      "jobTitle": "Fotógrafo, Filmmaker y Creador de Contenido",
       "sameAs": ["https://www.instagram.com/miguelphoto.ve/"]
     },
     "url": "https://miguelphoto.pages.dev/",
@@ -70,8 +70,6 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contenido para médicos y clínicas" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Videos y reels para redes sociales" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contenido UGC" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestión de redes sociales (Social Media Manager)" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Campañas de marketing" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Producción de podcast" } }
       ]
     }
@@ -103,14 +101,23 @@
   <main>
     <!-- ===================== PORTADA ===================== -->
     <section class="hero" id="inicio">
-      <div class="hero-media" aria-hidden="true">
-        <!-- EDITA: reemplaza por tu mejor foto horizontal -> img/hero.webp -->
-        <img src="https://picsum.photos/seed/mp-hero-01/1920/1280" alt="" fetchpriority="high">
+      <!--
+        EDITA: fotos de la portada (cambian solas cada 6 segundos).
+        Usa fotos horizontales (2400 px) en img/portada/. Puedes poner 3, 4, 5…
+        Para agregar otra: copia una línea <img class="hero-slide" …> y cambia el src.
+        La primera es la que carga primero: déjale class="hero-slide active".
+      -->
+      <div class="hero-media" id="heroSlides" aria-hidden="true">
+        <img class="hero-slide active" src="https://picsum.photos/seed/mp-hero-01/1920/1280" alt="" fetchpriority="high">
+        <img class="hero-slide" src="https://picsum.photos/seed/mp-hero-02/1920/1280" alt="" loading="lazy">
+        <img class="hero-slide" src="https://picsum.photos/seed/mp-hero-03/1920/1280" alt="" loading="lazy">
+        <img class="hero-slide" src="https://picsum.photos/seed/mp-hero-04/1920/1280" alt="" loading="lazy">
       </div>
+      <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow reveal">Miguel González · Fotógrafo · Filmmaker · Social Media Manager</p>
+        <p class="eyebrow reveal">Miguel González · Fotógrafo · Filmmaker · Creador de contenido</p>
         <h1 class="reveal">Imágenes que <em>cuentan</em><br>tu historia.</h1>
-        <p class="hero-sub reveal">Más de 6 años creando contenido con estrategia para marcas nacionales e internacionales, médicos y momentos únicos en Caracas.</p>
+        <p class="hero-sub reveal">Más de 6 años creando fotografía y contenido para marcas nacionales e internacionales, médicos y momentos únicos en Caracas.</p>
         <div class="hero-actions reveal">
           <a href="#portafolio" class="btn btn-gold">Ver portafolio</a>
           <a href="#" data-wa data-wa-msg="Hola Miguel, vi tu web y quiero información sobre una sesión." class="btn btn-ghost">Escríbeme por WhatsApp</a>
@@ -122,8 +129,8 @@
     <!-- Cinta de servicios -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>Estudio</span><i>✦</i><span>Bodas</span><i>✦</i><span>15 años</span><i>✦</i><span>Eventos</span><i>✦</i><span>Marcas</span><i>✦</i><span>Nicho médico</span><i>✦</i><span>Reels</span><i>✦</i><span>UGC</span><i>✦</i><span>Social Media</span><i>✦</i><span>Podcast</span><i>✦</i>
-        <span>Estudio</span><i>✦</i><span>Bodas</span><i>✦</i><span>15 años</span><i>✦</i><span>Eventos</span><i>✦</i><span>Marcas</span><i>✦</i><span>Nicho médico</span><i>✦</i><span>Reels</span><i>✦</i><span>UGC</span><i>✦</i><span>Social Media</span><i>✦</i><span>Podcast</span><i>✦</i>
+        <span>Estudio</span><i>✦</i><span>Bodas</span><i>✦</i><span>15 años</span><i>✦</i><span>Eventos</span><i>✦</i><span>Marcas</span><i>✦</i><span>Nicho médico</span><i>✦</i><span>Reels</span><i>✦</i><span>UGC</span><i>✦</i><span>Contenido</span><i>✦</i><span>Podcast</span><i>✦</i>
+        <span>Estudio</span><i>✦</i><span>Bodas</span><i>✦</i><span>15 años</span><i>✦</i><span>Eventos</span><i>✦</i><span>Marcas</span><i>✦</i><span>Nicho médico</span><i>✦</i><span>Reels</span><i>✦</i><span>UGC</span><i>✦</i><span>Contenido</span><i>✦</i><span>Podcast</span><i>✦</i>
       </div>
     </div>
 
@@ -131,18 +138,49 @@
     <section class="intro section" id="intro">
       <div class="container intro-grid">
         <div class="reveal">
-          <p class="eyebrow">Estrategia + imagen</p>
-          <h2>Marketing, fotografía y video <em>bajo una misma mirada.</em></h2>
+          <p class="eyebrow">Foto + video</p>
+          <h2>Fotografía y contenido <em>con mirada de autor.</em></h2>
         </div>
         <div class="reveal">
-          <p class="lead">No solo hago fotos y videos: pienso cada pieza como social media manager. Trabajo con marcas de consumo masivo, casas comerciales, doctores y personas que quieren verse de primer nivel, con contenido que tiene un propósito y genera resultados.</p>
+          <p class="lead">Cada foto y cada video que creo tiene un propósito: que tu marca, tu consulta o tu momento se vean de primer nivel. Trabajo con marcas de consumo masivo, casas comerciales, doctores y personas que quieren contenido que conecte.</p>
           <ul class="stats">
-            <li><strong data-count="6">0</strong><span>+ años en marketing</span></li>
+            <li><strong data-count="6">0</strong><span>+ años de experiencia</span></li>
             <li><strong data-count="7">0</strong><span>líneas de servicio</span></li>
             <!-- EDITA: coloca tu número real de proyectos o elimina este bloque -->
             <li><strong data-count="100">0</strong><span>+ proyectos realizados</span></li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARCAS (carrusel de logos) ===================== -->
+    <section class="brands" aria-labelledby="brandsTitle">
+      <p class="eyebrow center" id="brandsTitle">Marcas que confían en mi trabajo</p>
+      <!--
+        EDITA: un <li> por cada marca. Pon los logos en img/marcas/ (PNG con fondo
+        transparente, ~200 px de alto) y escribe el nombre de la marca en alt.
+        Ejemplo:  <li><img src="img/marcas/nombre-marca.png" alt="Nombre de la marca" loading="lazy"></li>
+          - Logo blanco o claro:  <li class="dark">…   (tarjeta oscura)
+          - Logo con su propio fondo de color:  <li class="fill">…   (llena la tarjeta)
+        No hace falta repetirlos: la web los duplica sola para que el giro sea infinito.
+      -->
+      <div class="brands-viewport">
+        <ul class="brands-track" id="brandsTrack">
+          <li><img src="img/marcas/dermaskintime.png" alt="DermaSkintime" loading="lazy"></li>
+          <li><img src="img/marcas/tu-buen-doctor.png" alt="Tu Buen Doctor" loading="lazy"></li>
+          <li class="fill"><img src="img/marcas/licores-43-grados.png" alt="Licores 43 Grados" loading="lazy"></li>
+          <li><img src="img/marcas/farmavalor.png" alt="Farmavalor" loading="lazy"></li>
+          <li><img src="img/marcas/omega-legal-solutions.png" alt="Omega Legal Solutions" loading="lazy"></li>
+          <li class="dark"><img src="img/marcas/betancourt-seguros.png" alt="Betancourt Seguros" loading="lazy"></li>
+          <li><img src="img/marcas/centro-clinico-mejoramiento-profesional.png" alt="Centro Clínico & Mejoramiento Profesional" loading="lazy"></li>
+          <li><img src="img/marcas/rent-a-house.png" alt="Rent-A-House" loading="lazy"></li>
+          <li class="fill"><img src="img/marcas/alibaba-mascotas.png" alt="Alibaba y sus Mascotas" loading="lazy"></li>
+          <li><img src="img/marcas/qm-drain.png" alt="QM Drain" loading="lazy"></li>
+          <li><img src="img/marcas/bazar-y-perfumeria-prado-y-amelia.png" alt="Bazar y Perfumería Prado y Amelia" loading="lazy"></li>
+          <li><img src="img/marcas/stand-food-drink.png" alt="Stand Food & Drink" loading="lazy"></li>
+          <li class="fill"><img src="img/marcas/impulso-digital.png" alt="Impulso Digital" loading="lazy"></li>
+          <li><img src="img/marcas/instituto-unitario-del-centro.png" alt="Instituto Unitario del Centro" loading="lazy"></li>
+        </ul>
       </div>
     </section>
 
@@ -235,8 +273,8 @@
             <div class="card-img"><img loading="lazy" src="https://picsum.photos/seed/mp-srv-marca/800/600" alt="Contenido para marcas y casas comerciales en Caracas"></div>
             <div class="card-body">
               <span class="card-num">04</span>
-              <h3>Marcas &amp; campañas</h3>
-              <p>Campañas de marketing, pautas en estudio fotográfico, catálogos y contenido mensual para marcas de consumo masivo y casas comerciales.</p>
+              <h3>Marcas &amp; pautas</h3>
+              <p>Pautas en estudio fotográfico, fotografía de producto, catálogos y contenido mensual para marcas de consumo masivo y casas comerciales.</p>
               <a href="#" class="card-link" data-wa data-wa-msg="Hola Miguel, quiero agendar una pauta para mi marca.">Consultar →</a>
             </div>
           </article>
@@ -245,8 +283,8 @@
             <div class="card-img"><img loading="lazy" src="https://picsum.photos/seed/mp-srv-reels/800/600" alt="Producción de videos y reels para redes sociales"></div>
             <div class="card-body">
               <span class="card-num">05</span>
-              <h3>Reels, UGC &amp; social media</h3>
-              <p>Contenido UGC, reels y videos verticales con guion, grabación y edición, más estrategia y gestión de redes como social media manager.</p>
+              <h3>Reels &amp; contenido UGC</h3>
+              <p>Reels, videos verticales y contenido UGC con guion, grabación y edición, listos para publicar en Instagram y TikTok.</p>
               <a href="#" class="card-link" data-wa data-wa-msg="Hola Miguel, quiero información sobre reels y contenido para redes.">Consultar →</a>
             </div>
           </article>
@@ -279,7 +317,7 @@
             <li>Retratos profesionales para perfil, web y directorios médicos</li>
             <li>Fotos del consultorio, equipo y equipos médicos</li>
             <li>Reels educativos y explicativos con tu especialidad</li>
-            <li>Planes mensuales de contenido para Instagram</li>
+            <li>Planes mensuales de fotos y reels para tus redes</li>
           </ul>
           <a href="#" class="btn btn-gold" data-wa data-wa-msg="Hola Miguel, soy médico y quiero información sobre contenido para mi consulta.">Quiero contenido para mi consulta</a>
         </div>
@@ -336,21 +374,21 @@
       <div class="container split reverse">
         <div class="split-media reveal">
           <!-- EDITA: tu foto personal -> img/miguel.webp -->
-<img loading="lazy" src="img/sobre-mi/miguel-gonzalez-fotografo-caracas.webp" alt="Miguel González, social media manager, fotógrafo y filmmaker en Caracas">        </div>
+<img loading="lazy" src="img/sobre-mi/miguel-gonzalez-fotografo-caracas.webp" alt="Miguel González, fotógrafo, filmmaker y creador de contenido en Caracas">        </div>
         <div class="split-text reveal">
           <p class="eyebrow">Sobre mí</p>
           <h2>Hola, soy <em>Miguel González.</em></h2>
           <ul class="roles" aria-label="Especialidades">
-            <li>Social Media Manager</li><li>Fotógrafo</li><li>Filmmaker</li><li>Creador UGC</li>
+            <li>Fotógrafo</li><li>Filmmaker</li><li>Creador de contenido</li><li>Creador UGC</li>
           </ul>
-          <p class="lead">Llevo más de 6 años en el mundo del marketing creando contenido que no solo se ve bien: <strong>conecta, posiciona y vende.</strong></p>
-          <p>Mi trabajo nace donde se cruzan la estrategia y la imagen. Como social media manager entiendo qué necesita tu marca para crecer en redes; como fotógrafo y filmmaker sé cómo convertir esa estrategia en piezas que detienen el scroll.</p>
-          <p>He trabajado con marcas a nivel nacional e internacional, marcas de consumo masivo, casas comerciales y doctores del nicho médico. Produzco contenido UGC, pautas en estudio fotográfico, campañas de marketing completas y coberturas de eventos, sin olvidar los momentos que se viven una sola vez, como bodas y 15 años.</p>
+          <p class="lead">Llevo más de 6 años detrás de la cámara creando imágenes que no solo se ven bien: <strong>conectan, transmiten y se recuerdan.</strong></p>
+          <p>Mi trabajo nace de la mirada: la luz, el encuadre y el momento justo. Como fotógrafo y filmmaker convierto cada idea en fotos y videos que detienen el scroll y cuentan quién eres o qué vende tu marca.</p>
+          <p>He trabajado con marcas a nivel nacional e internacional, marcas de consumo masivo, casas comerciales y doctores del nicho médico. Produzco contenido UGC, reels, pautas en estudio fotográfico y coberturas de eventos, sin olvidar los momentos que se viven una sola vez, como bodas y 15 años.</p>
           <ul class="checks">
             <li>Marcas nacionales e internacionales</li>
             <li>Consumo masivo y casas comerciales</li>
             <li>Doctores, especialistas y clínicas</li>
-            <li>Campañas de marketing, UGC y pautas en estudio</li>
+            <li>Reels, contenido UGC y pautas en estudio</li>
           </ul>
           <div class="signature">Miguel González</div>
         </div>
@@ -408,7 +446,7 @@
         <details class="reveal"><summary>¿Cómo reservo una sesión?</summary><p>Escríbeme por WhatsApp o llena el formulario de abajo con la fecha y el tipo de sesión. Confirmo disponibilidad y la fecha queda reservada con un abono.</p></details>
         <details class="reveal"><summary>¿En qué zonas trabajas?</summary><p>Trabajo en Caracas y sus alrededores. Para eventos o bodas en otras ciudades de Venezuela, consulta disponibilidad y costo de traslado.</p></details>
         <details class="reveal"><summary>¿Cuánto tiempo tarda la entrega?</summary><p>Depende del servicio: las sesiones de estudio se entregan en pocos días y las bodas o eventos grandes en un plazo mayor. Te doy la fecha exacta al reservar.</p></details>
-        <details class="reveal"><summary>¿Haces planes mensuales de contenido?</summary><p>Sí. Para marcas, casas comerciales y médicos tengo planes mensuales que incluyen fotos, reels y planificación de publicaciones.</p></details>
+        <details class="reveal"><summary>¿Haces planes mensuales de contenido?</summary><p>Sí. Para marcas, casas comerciales y médicos tengo planes mensuales de fotos y reels listos para publicar.</p></details>
         <details class="reveal"><summary>¿Qué métodos de pago aceptas?</summary><p>Consulta por WhatsApp los métodos de pago disponibles.</p></details>
       </div>
     </section>
@@ -441,11 +479,9 @@
               <option>15 años</option>
               <option>Evento social o corporativo</option>
               <option>Pauta para marca / casa comercial</option>
-              <option>Campaña de marketing</option>
               <option>Contenido UGC</option>
               <option>Contenido para médicos</option>
               <option>Reels y contenido para redes</option>
-              <option>Social media manager (gestión de redes)</option>
               <option>Producción de podcast</option>
             </select>
           </div>

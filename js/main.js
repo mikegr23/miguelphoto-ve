@@ -30,6 +30,52 @@ $$("#mapsLink, [data-maps]").forEach((a) => {
 });
 $("#year").textContent = new Date().getFullYear();
 
+/* ---------- Portada: fotos que cambian solas ---------- */
+const slides = $$(".hero-slide");
+const heroDots = $("#heroDots");
+const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (slides.length > 1) {
+  let s = Math.max(0, slides.findIndex((im) => im.classList.contains("active")));
+  let sTimer;
+  const goSlide = (i) => {
+    slides[s].classList.remove("active");
+    heroDots.children[s].classList.remove("active");
+    s = (i + slides.length) % slides.length;
+    slides[s].loading = "eager";
+    slides[(s + 1) % slides.length].loading = "eager"; // precarga la siguiente
+    slides[s].classList.add("active");
+    heroDots.children[s].classList.add("active");
+  };
+  const runSlides = () => { clearInterval(sTimer); if (!calm) sTimer = setInterval(() => goSlide(s + 1), 6000); };
+  slides.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.setAttribute("aria-label", `Foto ${i + 1}`);
+    b.tabIndex = -1;
+    if (i === s) b.classList.add("active");
+    b.addEventListener("click", () => { goSlide(i); runSlides(); });
+    heroDots.appendChild(b);
+  });
+  slides[(s + 1) % slides.length].loading = "eager";
+  runSlides();
+}
+
+/* ---------- Carrusel de logos: se duplica solo para girar sin cortes ---------- */
+const brandsTrack = $("#brandsTrack");
+if (brandsTrack) {
+  [...brandsTrack.children].forEach((li) => {
+    const copy = li.cloneNode(true);
+    copy.setAttribute("aria-hidden", "true");
+    $$("img", copy).forEach((im) => { im.alt = ""; });
+    brandsTrack.appendChild(copy);
+  });
+  // los logos pesan poco: cuando el carrusel se acerca a la pantalla, se cargan todos
+  new IntersectionObserver((entries, obs) => {
+    if (!entries[0].isIntersecting) return;
+    $$("img", brandsTrack).forEach((im) => { im.loading = "eager"; });
+    obs.disconnect();
+  }, { rootMargin: "600px 0px" }).observe(brandsTrack);
+}
+
 /* ---------- Menú: fondo al bajar, barra de progreso ---------- */
 const nav = $("#nav");
 const bar = $("#progressBar");
